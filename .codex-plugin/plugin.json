@@ -1,0 +1,21 @@
+{
+  "name": "thinkui",
+  "version": "1.0.1",
+  "description": "UI references for coding agents: real screens, flows, ready-made components, fonts and animated icons over MCP.",
+  "developerName": "ThinkUI",
+  "category": "Developer Tools",
+  "capabilities": ["Search", "Design references", "Code assets"],
+  "website": "https://thinkui.xyz",
+  "privacyPolicyURL": "https://thinkui.xyz/privacy",
+  "termsOfServiceURL": "https://thinkui.xyz/terms",
+  "supportURL": "https://thinkui.xyz/docs",
+  "brandColor": "#1a1613",
+  "logo": "./assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.codex.json",
+  "defaultPrompt": [
+    "How do good products frame a free trial on a paywall?",
+    "Find an empty state for a search with no results.",
+    "Which typeface holds up in a dense data table?"
+  ]
+}

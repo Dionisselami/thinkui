@@ -1,0 +1,22 @@
+{
+  "name": "thinkui",
+  "description": "UI references for coding agents: real screens, flows, ready-made components, fonts and animated icons over MCP.",
+  "version": "1.0.1",
+  "author": {
+    "name": "ThinkUI",
+    "email": "support@thinkui.xyz",
+    "url": "https://thinkui.xyz"
+  },
+  "homepage": "https://thinkui.xyz",
+  "repository": "https://github.com/Dionisselami/thinkui",
+  "license": "SEE LICENSE IN README.md",
+  "keywords": ["mcp", "ui", "design", "design-system", "ui-references"],
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "ThinkUI API key",
+      "description": "Create an account at https://thinkui.xyz/signup and copy the key from https://thinkui.xyz/account.",
+      "sensitive": true
+    }
+  }
+}

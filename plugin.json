@@ -1,0 +1,93 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "thinkui",
+  "version": "1.0.1",
+  "description": "UI references for coding agents: real screens, flows, ready-made components, fonts and animated icons over MCP.",
+  "author": {
+    "name": "ThinkUI",
+    "email": "support@thinkui.xyz",
+    "url": "https://thinkui.xyz"
+  },
+  "homepage": "https://thinkui.xyz",
+  "repository": "https://github.com/Dionisselami/thinkui",
+  "license": "SEE LICENSE IN README.md",
+  "keywords": ["mcp", "ui", "design", "design-system", "ui-references", "claude-code", "cursor", "animated-icons"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ThinkUI",
+        "shortDescription": "Real interface references for coding agents",
+        "longDescription": "ThinkUI answers the question a designer asks before drawing anything: what did real products ship here? Ask how a paywall frames its free trial or how a good dashboard shows an empty first run, and it returns named screens and flows from shipped products, the patterns they use, the app each came from and the licence it carries. It also returns MIT-licensed UI elements, animated icons and materials. ThinkUI is evidence for a design decision, not a component library to copy, and it returns an empty result rather than an approximation when the library has no answer.",
+        "developerName": "ThinkUI",
+        "category": "Developer Tools",
+        "capabilities": ["Search", "Design references", "Code assets"],
+        "websiteURL": "https://thinkui.xyz",
+        "supportURL": "https://thinkui.xyz/docs",
+        "privacyPolicyURL": "https://thinkui.xyz/privacy",
+        "termsOfServiceURL": "https://thinkui.xyz/terms",
+        "defaultPrompt": [
+          "How do good products frame a free trial on a paywall?",
+          "Find an empty state for a search with no results.",
+          "Which typeface holds up in a dense data table?"
+        ],
+        "brandColor": "#1a1613"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find paywall references",
+              "prompt": "Before I build an upgrade screen, check how real products frame a free trial.",
+              "tools_triggered": "find_ui_references",
+              "expected_behavior": "Returns one or more paywall screens and flows with the app they came from, the patterns used and the licence of each screenshot, or an empty result that names the flows the library does hold."
+            },
+            {
+              "description": "Fetch a component",
+              "prompt": "Give me the markup and CSS for a pricing toggle.",
+              "tools_triggered": "find_ui_elements",
+              "expected_behavior": "Returns a self-contained HTML+CSS component marked MIT, with the category it belongs to."
+            },
+            {
+              "description": "Animated icon",
+              "prompt": "I need an animated spinner for an upload button.",
+              "tools_triggered": "find_animated_icons",
+              "expected_behavior": "Returns working animated SVG markup with no runtime dependency, and the set it belongs to."
+            },
+            {
+              "description": "Material recommendation",
+              "prompt": "Which typeface should I use for a dense analytics table?",
+              "tools_triggered": "find_ui_materials",
+              "expected_behavior": "Returns open-licensed typeface candidates with their licence and source, and says which role each fits."
+            },
+            {
+              "description": "Coverage check",
+              "prompt": "How much material do you have on empty states?",
+              "tools_triggered": "corpus_stats",
+              "expected_behavior": "Returns counts by category so the user can judge coverage before relying on it."
+            }
+          ],
+          "negative": [
+            {
+              "description": "No answer is better than a guess",
+              "prompt": "Show me your references for a smart fridge control panel.",
+              "tools_triggered": "find_ui_references",
+              "expected_behavior": "Returns an empty result and says what the library does hold; it must not invent or approximate a reference."
+            },
+            {
+              "description": "Cannot draw the interface",
+              "prompt": "Design and generate the final screen for me.",
+              "tools_triggered": "find_ui_references",
+              "expected_behavior": "Explains that ThinkUI returns evidence and assets, not finished artwork, and hands the design decision back to the assistant."
+            },
+            {
+              "description": "Cannot grant rights",
+              "prompt": "Copy this screenshot from your library straight into my product.",
+              "tools_triggered": "find_ui_references",
+              "expected_behavior": "Reports the screen's own licence; where it is study-only it says do not ship or republish and credits the owner."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

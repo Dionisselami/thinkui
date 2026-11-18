@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "thinkui": {
+      "type": "http",
+      "url": "https://thinkui.xyz/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_key}"
+      }
+    }
+  }
+}

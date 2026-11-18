@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "thinkui": {
+      "type": "http",
+      "url": "https://thinkui.xyz/mcp",
+      "bearer_token_env_var": "THINKUI_KEY"
+    }
+  }
+}
