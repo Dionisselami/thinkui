@@ -10,7 +10,7 @@ patterns in play, the app it came from, and the licence that screen carries.
 It is evidence for a design decision. It is not a component library to copy out of.
 
 - **Endpoint:** `https://thinkui.xyz/mcp` (streamable HTTP)
-- **Auth:** `Authorization: Bearer <key>` — keys are issued at [thinkui.xyz/account](https://thinkui.xyz/account)
+- **Auth:** OAuth 2.1 (discovery at `https://thinkui.xyz/.well-known/oauth-protected-resource`) or an API key sent as an `Authorization` header — keys are issued at [thinkui.xyz/account](https://thinkui.xyz/account)
 - **Website:** [thinkui.xyz](https://thinkui.xyz)
 - **Agent skill:** `npx skills add https://thinkui.xyz --skill thinkui -y`
 
@@ -80,8 +80,10 @@ Or project scope, committed without the key (Claude Code expands `${VAR}`):
 **Claude Desktop** (`claude_desktop_config.json`), **Windsurf** (`~/.codeium/windsurf/mcp_config.json`,
 `serverUrl` key) and **Zed** take the same two values in their own shape.
 
-**ChatGPT web connectors** accept OAuth or no-auth servers only. ThinkUI authenticates with a static API
-key, so it cannot be added there — use a client from the list above.
+**ChatGPT and Claude web connectors** sign the user in with OAuth instead of a key. Paste
+`https://thinkui.xyz/mcp`; the client discovers the authorization server from
+`https://thinkui.xyz/.well-known/oauth-protected-resource`, registers itself, and asks you to
+approve read-only access (`mcp:read`). Authorization code with PKCE, no client secret.
 
 ### Agent skill
 
