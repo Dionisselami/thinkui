@@ -2,20 +2,45 @@
   "name": "thinkui",
   "version": "1.0.1",
   "description": "UI references for coding agents: real screens, flows, ready-made components, fonts and animated icons over MCP.",
-  "developerName": "ThinkUI",
-  "category": "Developer Tools",
-  "capabilities": ["Search", "Design references", "Code assets"],
-  "website": "https://thinkui.xyz",
-  "privacyPolicyURL": "https://thinkui.xyz/privacy",
-  "termsOfServiceURL": "https://thinkui.xyz/terms",
-  "supportURL": "https://thinkui.xyz/docs",
-  "brandColor": "#1a1613",
-  "logo": "./assets/logo.svg",
+  "author": {
+    "name": "ThinkUI",
+    "url": "https://thinkui.xyz"
+  },
+  "homepage": "https://thinkui.xyz",
+  "repository": "https://github.com/Dionisselami/thinkui",
+  "license": "SEE LICENSE IN README.md",
+  "keywords": [
+    "mcp",
+    "ui",
+    "design",
+    "design-system",
+    "ui-references",
+    "ui-components",
+    "animated-icons",
+    "design-to-code"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.codex.json",
-  "defaultPrompt": [
-    "How do good products frame a free trial on a paywall?",
-    "Find an empty state for a search with no results.",
-    "Which typeface holds up in a dense data table?"
-  ]
+  "interface": {
+    "displayName": "ThinkUI",
+    "shortDescription": "Real interface references for coding agents",
+    "longDescription": "ThinkUI answers the question a designer asks before drawing anything: what did real products ship here? Ask how a paywall frames a free trial, how a good dashboard shows an empty first run, or which typeface survives a dense table, and it returns named screens and flows from shipped products with the app each came from and the licence it carries, plus MIT-licensed UI elements, animated icons and materials. It is evidence for a design decision, not a component library to copy, and it returns an empty result rather than an approximation when the library has no answer.",
+    "developerName": "ThinkUI",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://thinkui.xyz",
+    "supportURL": "https://thinkui.xyz/docs",
+    "privacyPolicyURL": "https://thinkui.xyz/privacy",
+    "termsOfServiceURL": "https://thinkui.xyz/terms",
+    "defaultPrompt": [
+      "How do good products frame a free trial on a paywall?",
+      "Find an empty state for a search with no results.",
+      "Which typeface holds up in a dense data table?"
+    ],
+    "logo": "./assets/logo.svg",
+    "screenshots": [],
+    "brandColor": "#1a1613"
+  }
 }

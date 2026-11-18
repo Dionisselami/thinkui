@@ -3,7 +3,8 @@
     "thinkui": {
       "type": "http",
       "url": "https://thinkui.xyz/mcp",
-      "bearer_token_env_var": "THINKUI_KEY"
+      "oauth_resource": "https://thinkui.xyz/mcp",
+      "note": "ThinkUI is read-only. Connect with OAuth (the client opens the browser to sign in); an API key can be supplied as an Authorization: Bearer tk_... header instead."
     }
   }
 }
