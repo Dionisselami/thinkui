@@ -1,0 +1,20 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Use the corpus",
+      "description": "Ask real captured screens for evidence before you design, instead of guessing at taste.",
+      "skills": [
+        "thinkui"
+      ]
+    },
+    {
+      "title": "Stop the slop",
+      "description": "The UI finish gate: settle each decision with a reference, design the four states, then pass six checks before claiming the screen is done.",
+      "skills": [
+        "thinkui-anti-slop"
+      ]
+    }
+  ]
+}

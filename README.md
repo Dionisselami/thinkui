@@ -12,7 +12,8 @@ It is evidence for a design decision. It is not a component library to copy out 
 - **Endpoint:** `https://thinkui.xyz/mcp` (streamable HTTP)
 - **Auth:** OAuth 2.1 (discovery at `https://thinkui.xyz/.well-known/oauth-protected-resource`) or an API key sent as an `Authorization` header — keys are issued at [thinkui.xyz/account](https://thinkui.xyz/account)
 - **Website:** [thinkui.xyz](https://thinkui.xyz)
-- **Agent skill:** `npx skills add https://thinkui.xyz --skill thinkui -y`
+- **Agent skills:** `npx skills add https://thinkui.xyz --skill thinkui -y`
+- **Anti-slop gate:** `npx skills add Dionisselami/thinkui --skill thinkui-anti-slop -y`
 
 No local install, no package, no daemon. One URL and one header.
 
@@ -95,6 +96,17 @@ npx skills add https://thinkui.xyz --skill thinkui -y
 
 Installs `.agents/skills/thinkui/SKILL.md`. Also installable from this repo:
 `npx skills add Dionisselami/thinkui`.
+
+Two skills live in this repo:
+
+| Skill | What it does |
+|---|---|
+| `thinkui` | The habit of asking the corpus for evidence before designing. |
+| `thinkui-anti-slop` | The finish gate for UI: evidence call, four states, real content, one winning element, tokens, then six checks before you call it done. |
+
+```
+npx skills add Dionisselami/thinkui --skill thinkui-anti-slop -y
+```
 
 ## What comes back
 
