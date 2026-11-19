@@ -105,8 +105,11 @@ Two skills live in this repo:
 | `thinkui-anti-slop` | The finish gate for UI: evidence call, four states, real content, one winning element, tokens, then six checks before you call it done. |
 
 ```
-npx skills add Dionisselami/thinkui --skill thinkui-anti-slop -y
+npx skills add Dionisselami/thinkui-anti-slop -y
 ```
+
+It also has its own repository, so the gate can be installed without the rest:
+https://github.com/Dionisselami/thinkui-anti-slop
 
 ## What comes back
 
